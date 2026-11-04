@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,6 +16,8 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: Run Ruff
+        run: ruff check .
       - name: Run tests
         run: python -m pytest -v
 
