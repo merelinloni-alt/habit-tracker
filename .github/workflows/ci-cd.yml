@@ -35,8 +35,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy web --project-name=habit-tracker
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: habit-tracker
-          directory: web
+      
