@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-def calculate_streak(habit_checkins):
-=======
-notepad src/app.py
->>>>>>> 6078801 (refactor(streak): add type hints to signature)
-    """Серия (streak) выполнения привычки, максимум 365 дней."""
-    streak = 0
+"""Core streak calculation for Habit Tracker."""
 
-    for done in reversed(check_ins):
-        if not done:
+
+def calculate_streak(habit_checkins: list[bool]) -> int:
+    """Return the number of consecutive successful check-ins at the end.
+
+    The streak is capped at 365 days. A failed check-in breaks the streak.
+    """
+    streak = 0
+    for completed in reversed(habit_checkins):
+        if not completed:
             break
         streak += 1
-
-def calculate_streak(check_ins):
-    """Серия (streak) выполнения привычки, максимум 365 дней."""
-    streak = 0
-
-    for done in reversed(check_ins):
-        if not done:
-            break
-        streak += 1
-
-    streak = min(streak, 365)
-    print(f"Текущая серия: {streak}")
-
-    return streak
+    return min(streak, 365)

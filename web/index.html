@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Habit Tracker — простой трекер полезных привычек.">
+  <title>Habit Tracker — привычки каждый день</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Habit Tracker">
+        <span class="brand-mark">H</span><span>habit<span class="brand-light">track</span></span>
+      </a>
+      <span class="top-pill"><i></i> Твой маленький прогресс</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="spark">✦</span> СТРОИМ ПРИВЫЧКИ, МЕНЯЕМ ЖИЗНЬ</div>
+      <h1>Каждый день —<br><span>шаг к лучшей версии себя.</span></h1>
+      <p class="hero-copy">Не нужно быть идеальным. Просто возвращайся к тому, что важно.</p>
+    </section>
+
+    <section class="dashboard">
+      <div class="section-heading">
+        <div><p class="overline">ТВОЙ ПЛАН</p><h2>Привычки на сегодня</h2></div>
+        <div class="date-chip" id="today-date">Сегодня</div>
+      </div>
+
+      <div class="stats">
+        <article class="stat-card"><span class="stat-icon violet">✦</span><div><strong id="done-count">0/3</strong><small>Выполнено сегодня</small></div></article>
+        <article class="stat-card"><span class="stat-icon orange">♨</span><div><strong id="streak-count">0 дней</strong><small>Текущая серия</small></div></article>
+        <article class="stat-card"><span class="stat-icon green">↗</span><div><strong id="progress-count">0%</strong><small>Прогресс дня</small></div></article>
+      </div>
+
+      <div class="habit-list" id="habit-list">
+        <label class="habit-row"><input type="checkbox" data-habit="water"><span class="checkmark"></span><span class="habit-emoji">💧</span><span class="habit-info"><b>Выпить 2 литра воды</b><small>Забота о себе</small></span><span class="habit-time">Утро</span></label>
+        <label class="habit-row"><input type="checkbox" data-habit="reading"><span class="checkmark"></span><span class="habit-emoji">📖</span><span class="habit-info"><b>Прочитать 20 страниц</b><small>Развитие каждый день</small></span><span class="habit-time">День</span></label>
+        <label class="habit-row"><input type="checkbox" data-habit="walk"><span class="checkmark"></span><span class="habit-emoji">🚶</span><span class="habit-info"><b>Прогуляться 30 минут</b><small>Движение — это жизнь</small></span><span class="habit-time">Вечер</span></label>
+      </div>
+
+      <div class="progress-block">
+        <div class="progress-label"><span>Прогресс за сегодня</span><b id="progress-label">0 из 3</b></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+      <p class="note"><span>✧</span> Маленькие действия каждый день приводят к большим результатам.</p>
+    </section>
+    <footer><span>HABIT TRACKER</span><span>Создано для твоего прогресса · <span id="year"></span></span></footer>
+  </main>
+</body>
+</html>
